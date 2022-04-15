@@ -1,0 +1,34 @@
+<view class="content">
+    <view class="swiper_img">
+        <swiper autoplay='true' interval='{{interval}}' circular='true' >
+            <swiper-item>
+                <image src="../../images/index_pic.JPG"></image>
+            </swiper-item>
+            <swiper-item>
+                <image src="../../images/index_pic_1.JPG"></image>
+            </swiper-item>
+            <swiper-item>
+                <image src="../../images/index_pic_2.JPG"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="item_page">
+        <navigator class="item" url="/pages/lost_more/lost_more">
+            <i class="iconfont icon-wupindiushi"></i>
+            <view>寻物启事</view>
+        </navigator>
+        <navigator class="item" url="/pages/found_more/found_more">
+            <i class="iconfont icon-fangdajing"></i>
+            <view>失物招领</view>
+        </navigator>
+        <navigator class="item" url="/pages/advice/advice">
+            <i class="iconfont icon-yijian"></i>
+            <view>投递意见</view>
+        </navigator>
+        <navigator class="item" url="/pages/about/about">
+            <i class="iconfont icon-guanyuwomen"></i>
+            <view>关于我们</view>
+        </navigator>
+    </view>
+</view>
+<tabbar tabbar="{{tabbar}}"></tabbar>

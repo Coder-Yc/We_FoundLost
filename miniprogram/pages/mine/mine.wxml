@@ -1,0 +1,48 @@
+<view class="header">
+  <view class="mask"></view>
+  <view class='wave'></view>
+  <view class='wave_1'></view>
+  <view class='wave_2'></view>
+  <view class="info">
+    <block wx:if="{{isHidden}}">
+      <button class="userinfo-btn" bindtap="getUserProfile">是否授权登陆</button>
+    </block>
+    <view wx:else="{{!isHidden}}" class="avatar">
+      <image src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="nav">
+  <view class="nav-item">
+    <navigator class="content" hover-class="none" url="/pages/profile/profile">
+      <i class="iconfont icon-gerenxinxi"></i>
+      <text class="text">个人信息</text>
+      <i class="iconfont icon-xiangyou"></i>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <navigator class="content" hover-class="none" url="/pages/Person/Person?type={{lost}}">
+      <i class="iconfont icon-found"></i>
+      <text class="text">我发布的失物招领</text>
+      <i class="iconfont icon-xiangyou"></i>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <navigator class="content" hover-class="none" url="/pages/Person/Person?type={{found}}">
+      <i class="iconfont icon-lost"></i>
+      <text class="text">我发布的寻物启事</text>
+      <i class="iconfont icon-xiangyou"></i>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <navigator class="content" hover-class="none" url="/pages/list/all?type=found&mine=yes">
+      <i class="iconfont icon-lost"></i>
+      <text class="text">退出登录</text>
+      <i class="iconfont icon-xiangyou"></i>
+    </navigator>
+  </view>
+</view>
+
+<tabbar tabbar="{{tabbar}}"></tabbar>

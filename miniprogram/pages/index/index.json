@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tabbar": "../../tabbarComponent/tabbar",
+    "thing_list" : "../../components/list/list"
+
+  }
+}

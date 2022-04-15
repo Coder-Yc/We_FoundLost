@@ -1,0 +1,64 @@
+<view class="navigator">
+  <view class="item">
+    <view class="label">物品名称：</view>
+    <view class="input_name">
+      <input type="text" value="{{info.name}}" placeholder="请输入物品名称" class="input" bindinput="handelInput"></input>
+    </view>
+  </view>
+
+  <view class="item">
+    <view class="label">丢失时间:</view>
+    <view class="input_name">
+      <picker mode="date" value="{{lost_data}}" bindchange="changeDate">
+        <view class="tui-picker-detail">
+          <view>{{lost_data[0]}} 年</view>
+          <view>{{lost_data[1]}} 月</view>
+          <view>{{lost_data[2]}} 日</view>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="item">
+    <view class="label">丢失地点：</view>
+    <view class="input_name">
+      <input type="text" value="{{info.place}}" placeholder="请输入丢失地点" class="input" bindinput="handelInpu_place"></input>
+    </view>
+  </view>
+
+
+  <view class="item">
+    <view class="label">联系方式：</view>
+    <view class="input_name">
+      <input type="text" value="{{info.phone}}" placeholder="请输入联系电话" class="input" bindinput="handelInput_contact"></input>
+    </view>
+  </view>
+
+  <view class="item">
+    <view class="label">物品描述：</view>
+    <view class="input_desc">
+      <input type="text" value="{{info.desc}}" placeholder="请输入物品描述：（300字以内）" class="input" bindinput="handelInput_desc"></input>
+    </view>
+  </view>
+
+  <view class="item">
+    <view class="label">物品图片：</view>
+    <view class="input-thing">
+      <view class="imgs-wrap">
+        <block wx:for="{{tmpImgs}}" wx:key="*this">
+          <view class="img-item">
+            <image mode="aspectFill" src="{{item}}"></image>
+            <view catchtap="delPic" data-index="{{index}}" class="img-del"></view>
+          </view>
+        </block>
+        <view class="img-item" bindtap="selcetPics">
+          <image class="sel-pic" mode="aspectFit" src="../../images/upload.svg"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="item">
+	<button bindtap="save" class="my-btn submit-btn">提交</button>
+</view>
+</view>
